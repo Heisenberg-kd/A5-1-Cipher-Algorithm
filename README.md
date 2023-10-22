@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # A5/1 Cipher algorithm
 ### Implementation of A5/1 Cipher Algorithm to encrypt and decrypt Images in verilog. Used Python for Image Processing libraries 
 
