@@ -1,0 +1,16 @@
+A5/1 Stream Cipher
+
+Important Signals: LFSRs (x,y,z), count, ready
+
+A global reset is used to reset the LFSRs to zero, the count to 186, and ready to 0.
+After the reset is asserted, the 64-bit private key is fed into the LFSRs, followed by the 22-bit public key, ignoring the majority logic.
+The count is decremented by 1 every time one bit is fed, and at the end of the initialization stage, the count value becomes 186-64-22 = 100.
+
+When count reaches 100, the LFSRs are clocked taking the majority logic into consideration, for 100 clock cycles.
+The value of count is decremented by 1 every cycle to keep track of 100 cycles.
+
+When count reaches 0, that signifies the end of 100 clock cycles, and the ready signal becomes 1, indicating that the circuit is now ready to start encrypting (or decrypting) the incoming data.
+
+Both design-1 and design-2 are implemented, as two separate test benches. In design-1, the encryption is done pixel by pixel, whereas in design-2, it is done separately for each bit-plane.
+
+The majority logic is implemented using case statements.
