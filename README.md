@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # A5/1 Cipher algorithm
 ### Implementation of A5/1 Cipher Algorithm to encrypt and decrypt Images in verilog. Used Python for Image Processing libraries 
 
@@ -120,3 +121,6 @@ ciphertext ⊕ keystream = plaintext
 - https://en.wikipedia.org/wiki/A5/1
 - https://www.cryptographynotes.com/2019/02/symmetric-stream-a5by1-algorithm-linear-feedback-shift-register.html
 - https://www.youtube.com/watch?v=LgZAI3DdUA4
+=======
+# A5-1-Cipher-Algorithm
+>>>>>>> 4da281b030584003480980012bf46efe38a1a655
